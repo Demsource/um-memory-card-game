@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  border: 2px solid white;
+  border-radius: 6px;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+.card img.img-medium {
+  width: 150px;
+  height: 150px;
+}
+.card img.img-hard {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  .card img {
+    width: 167.5px !important;
+    height: 167.5px !important;
+  }
+  .card img.img-medium {
+    width: 157.5px !important;
+    height: 157.5px !important;
+  }
+  .card img.img-hard {
+    width: 108.33px !important;
+    height: 108.33px !important;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* Styles for mobiles */
+  .card img {
+    width: 71.25px !important;
+    height: 71.25px !important;
+  }
+  .card img.img-medium {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .card img.img-hard {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* Styling front card, picture */
+.card img.front {
+  position: absolute;
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+}
+.card .flipped img.front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+/* End of Styling front card, picture */
+
+/* Styling back card, cover */
+.card img.back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+.card .flipped img.back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+/* End of Styling back card, cover */

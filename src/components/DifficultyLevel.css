@@ -1,0 +1,9 @@
+.difficulty-level h2 {
+  margin-top: 30px;
+}
+
+.difficulty-level .dl-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

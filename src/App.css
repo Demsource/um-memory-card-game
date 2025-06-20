@@ -1,0 +1,45 @@
+.App {
+  max-width: 860px;
+  margin: 30px auto;
+}
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  .App {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* Styles for mobiles */
+  .App {
+    max-width: 300px;
+  }
+  .App.app-hard {
+    max-width: 325px;
+  }
+}
+
+.App .card-grid {
+  position: relative;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  .App .card-grid {
+    grid-gap: 10px;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* Styles for mobiles */
+  .App .card-grid {
+    grid-gap: 5px;
+  }
+}
+
+.App .attempts {
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 30px;
+}
