@@ -34,7 +34,7 @@
     height: 108.33px !important;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   /* Styles for mobiles */
   .card img {
     width: 71.25px !important;

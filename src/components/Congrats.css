@@ -17,7 +17,7 @@
   width: 100%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   .congrats-wrap .congrats {
     font-size: smaller;
   }
