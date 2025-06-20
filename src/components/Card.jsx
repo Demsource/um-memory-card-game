@@ -24,7 +24,7 @@ const Card = ({ card, difficultyLevel, handleChoice, flipped, disabled }) => {
               ? "img-medium"
               : ""
           }`}
-          src="/img/cover.jpg"
+          src="/um-memory-card-game/img/cover.jpg"
           alt="Card Back"
           onClick={() => !disabled && handleChoice(card)}
         />
