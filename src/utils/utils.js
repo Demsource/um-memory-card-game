@@ -44,7 +44,7 @@ export const shuffle = (array) => {
 };
 
 export const calculateScore = (difficultyLevel, attempts, time) => {
-  // Setting difficulty level number optionally to uniquie images quantity
+  // Setting difficulty level number to uniquie images quantity
   const difficultyLevelNum =
     difficultyLevel === "easy"
       ? 6
@@ -54,18 +54,19 @@ export const calculateScore = (difficultyLevel, attempts, time) => {
       ? 18
       : 0;
 
-  // Setting ideal attempts(1 attempt = choosing 2 cards) to uniquie images quantity (case for low possibility of matching all pairs on the first attempt)
+  // Setting ideal attempts(1 attempt = choosing 2 cards) to unique images quantity (a low possibility case of matching all pairs on the first attempt)
   const idealAttempts = difficultyLevelNum;
-  // Setting ideal time to total images quantity (as if each card click takes 1 second and happens non-stop, consecutively)
+  // Setting ideal time to total images quantity (as if each card click takes 1 second and happens non-stop, consecutively with zero interval)
   const idealTime = difficultyLevelNum * 2;
 
-  // Ideally, dividend(10000) when divided by divisor(1) equals to maximum amount(10000) of score
-  // So, in an ideal divisor case, static number of difficulty level multiplied by dynamic ideal attempts and time
+  // Ideally, dividend(10000) when divided by divisor(1) equals to maximum amount of score(10000)
+  // So, in an ideal divisor case, static number - difficulty level multiplied by dynamic ideal attempts and dynamic ideal time
   // should be multiplied by a default coefficient which should give back 1 as a result
+  // So, to find out what the default coefficient is, we should divide 1 by the product of all the other factors multiplied
   const defaultCoefficient =
     1 / (difficultyLevelNum * idealAttempts * idealTime);
 
-  // If any of the multiplicators - attempts and time increase, the overal result will become less score
+  // If any of the factors - attempts and/or time increase, the overall result will become less score
   // (changing variables: attempts to idealAttempts and time to idealTime manually, score should become maximum of 10000)
   const score =
     10000 / (difficultyLevelNum * attempts * time * defaultCoefficient);

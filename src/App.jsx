@@ -53,7 +53,7 @@ function App() {
 
   useEffect(() => {
     if (choiceOne && !choiceTwo) {
-      // Handle doubleclick bug on a single choice one card, which reveals two matched cards
+      // Prevent doubleclick on a single, choice one card
       // Avoiding a card click until the choice one card is rotated
       // 0.2 second being a time taken for transforming rotation
       setDisabled(true);
